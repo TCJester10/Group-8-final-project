@@ -31,7 +31,7 @@ MANIFEST
 .DS_Store
 
 # data files
-data/
+travis_uploads/data/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
