@@ -1,19 +1,17 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
-
 CREATE TABLE "county" (
-    "fips" int   NOT NULL,
-    "name" string   NOT NULL,
-    "state" string   NOT NULL,
+    "fips" numeric   NOT NULL,
+    "name" varchar   NOT NULL,
+    "state" varchar   NOT NULL,
     CONSTRAINT "pk_county" PRIMARY KEY (
         "fips"
      )
 );
 
 CREATE TABLE "weather_data" (
-    "id" int   NOT NULL,
-    "fips" int   NOT NULL,
+    "fips" numeric   NOT NULL,
     "date" date   NOT NULL,
     "total_population" bigint   NOT NULL,
     "area_sqmi" int   NOT NULL,
@@ -51,15 +49,11 @@ CREATE TABLE "weather_data" (
     "dewpoint_3d_avg" numeric   NOT NULL,
     "dewpoint_5d_avg" numeric   NOT NULL,
     "dewpoint_10d_avg" numeric   NOT NULL,
-    "dewpoint_15d_avg" numeric   NOT NULL,
-    CONSTRAINT "pk_weather_data" PRIMARY KEY (
-        "id"
-     )
+    "dewpoint_15d_avg" numeric   NOT NULL
 );
 
 CREATE TABLE "soil_data" (
-    "id" int   NOT NULL,
-    "fips" int   NOT NULL,
+    "fips" numeric   NOT NULL,
     "lat" numeric   NOT NULL,
     "lon" numeric   NOT NULL,
     "elevation" int   NOT NULL,
@@ -90,15 +84,11 @@ CREATE TABLE "soil_data" (
     "SQ4" int   NOT NULL,
     "SQ5" int   NOT NULL,
     "SQ6" int   NOT NULL,
-    "SQ7" int   NOT NULL,
-    CONSTRAINT "pk_soil_data" PRIMARY KEY (
-        "id"
-     )
+    "SQ7" int   NOT NULL
 );
 
 CREATE TABLE "drought_time_series" (
-    "id" int   NOT NULL,
-    "fips" int   NOT NULL,
+    "fips" numeric   NOT NULL,
     "date" date   NOT NULL,
     "PRECTOT" numeric   NOT NULL,
     "PS" numeric   NOT NULL,
@@ -118,18 +108,14 @@ CREATE TABLE "drought_time_series" (
     "WS50M_MAX" numeric   NOT NULL,
     "WS50M_MIN" numeric   NOT NULL,
     "WS50M_RANGE" numeric   NOT NULL,
-    "score" numeric   NOT NULL,
-    CONSTRAINT "pk_drought_time_series" PRIMARY KEY (
-        "id"
-     )
+    "score" numeric
 );
-
-ALTER TABLE "county" ADD CONSTRAINT "fk_county_fips" FOREIGN KEY("fips")
-REFERENCES "soil_data" ("fips");
 
 ALTER TABLE "weather_data" ADD CONSTRAINT "fk_weather_data_fips" FOREIGN KEY("fips")
 REFERENCES "county" ("fips");
 
-ALTER TABLE "drought_time_series" ADD CONSTRAINT "fk_drought_time_series_fips" FOREIGN KEY("fips")
+ALTER TABLE "soil_data" ADD CONSTRAINT "fk_soil_data_fips" FOREIGN KEY("fips")
 REFERENCES "county" ("fips");
 
+ALTER TABLE "drought_time_series" ADD CONSTRAINT "fk_drought_time_series_fips" FOREIGN KEY("fips")
+REFERENCES "county" ("fips");
