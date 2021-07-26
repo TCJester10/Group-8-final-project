@@ -1,5 +1,18 @@
 # Group-8-final-project
 
+# GitHub
+* Communication Protocols: As a group we decided to create a slack channel for all communication. We have been using the channel to share resources as well as keep each other up to date on progress, roadblocks, and everything else. 
+* Branches: Each team member has a branch named after themselves for uploading work to github. Each branch has an individual folder for our work to prevent issues during merges. The final deliverables will be handled by one group member.
+
+# Presentation
+* Topic: Using weather/climate data to predict droughts
+* Reason for topic: Rising temperatures and global warming has caused many environmental challenges. Droughts can have lasting effects on food supply and the economy. If we could predict droughts based on current weather/climate patterns it could help areas work to prepare for water shortages before they occur.
+* Data Sources: Currently, all of our data has been sourced from Kaggle:
+- - https://www.kaggle.com/johnjdavisiv/us-counties-covid19-weather-sociohealth-data
+- - https://www.kaggle.com/cdminix/us-drought-meteorological-data
+- - https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697
+- The main question we hope to answer is whether or not we can predict a drought and its severity based off of weather/climate patterns and landscape/soil. Additioanal questions to answer are whether some factors have a stronger correlation with drought than others.
+
 # Machine Learning
 ## Which model did you choose and why?
 
