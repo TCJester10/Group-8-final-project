@@ -15,6 +15,6 @@ What this is is just a simple value statement of the avg. precip across all coun
 What this shows is the change over the years in avg. precip over time. As can be seen there isn't one trend to really focus on. It will be interesting to look at the 
 geographic trends as the project advances. 
 
-##Future considerations
+## Future considerations
 What I want to look into is specifics. What I have currently is just info for everywhere. I want to focus on Texas. I also was only able to get the data up to 2016 only
 running. I hope to have all the data ready by next week. All in all I am excited to see what next week will bring. 
