@@ -1,0 +1,3 @@
+select c.name, c.state, w.*
+from weather_data as w
+join county as c on c.fips = w.fips
