@@ -81,3 +81,26 @@ geographic trends as the project advances.
 ## Future considerations
 What I want to look into is specifics. What I have currently is just info for everywhere. I want to focus on Texas. I also was only able to get the data up to 2016 only
 running. I hope to have all the data ready by next week. All in all I am excited to see what next week will bring. 
+
+## Second Portion 
+
+[Tableau Dashboard](https://public.tableau.com/app/profile/tessa.c5417/viz/ContinuedDroughtworkTXCalifornia/Dashboard1?publish=yes)
+
+This week was mainly planning over plotting. I have some ideas of where to take things though after an initial look at things. We have filtered our data to just Texas and California counties, and have working and connected ML and Databases. 
+
+![2017-2018](https://github.com/TCJester10/Group-8-final-project/blob/main/Images/Screenshot%20(121).png)
+
+This image shows off the total precipitation over the 12 months in the years 2017 and 2018. It is interesting to see how 2017 is skewed so heavily by Hurricane Harvey in 
+August. Overall, these were drier years outside of that heavy month though. 
+
+![2020](https://github.com/TCJester10/Group-8-final-project/blob/main/Images/Screenshot%20(122).png)
+
+Here we have our 2020 data. This mainly shows that rain peaks in May, and then gets drier before fall picks it up again. Make sure to take a look at the axis! 2020 was a much wetter year for both Texas and California. 
+
+## Future Considerations. 
+
+This is the fun part. I have a lot of ideas of where to take this. What I have found is that while Tableau has good data for simple charts and filtering data, I need
+something more to map things. I tried using soil data's lat and long to make a map of cuotivated and urban land by county, but without actual county lines, I can't map that much. 
+So going forward, what I want to do is move to R or Matplotlib and develop a map by county line. I can use shinyApp to do this by precip, change in precip over time, and predicted results going forward. 
+I really want to seperate the Texas and California results too, but I think by putting my information in map form that will be done quite easily. I also need to lookout
+for things like tropical weather outliers. Harvey hit Texas in 2017 and as we see it caused a massive spike in preciptation. This will be quite interesting going forward I think. I am quite excited. 
