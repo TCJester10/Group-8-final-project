@@ -1,5 +1,8 @@
 # Group-8-final-project
 
+## Presentation Google Slides
+https://docs.google.com/presentation/d/1oIMWOz1G4GiZtV2B5yJRL4Edb2S7TenvNDerIaXrjV0/edit#slide=id.ge7614f267f_1_29
+
 # GitHub
 * Communication Protocols: As a group we decided to create a slack channel for all communication. We have been using the channel to share resources as well as keep each other up to date on progress, roadblocks, and everything else. 
 * Branches: Each team member has a branch named after themselves for uploading work to github. Each branch has an individual folder for our work to prevent issues during merges. The final deliverables will be handled by one group member.
