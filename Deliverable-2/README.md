@@ -64,6 +64,7 @@ The MSE increased, which indicates that the soil data actually made it more diff
   - For a specific break down of the tables please see the ERD or drought_final_DB.sql file.
 - The DB is connected with the machine learning model by hosting it in the cloud through AWS/RDS.
 - In order to streamline and reduce the data, I dropped all the county and state information from each individual table and only left the county fips code as a unique identifier. This information can be joined back together using a simple SQL join statement. See *drought_join.sql* for a specific example.
+- The data is being consolidated down to Texas and California for initial analysis. After cleaning the data and reducing it down to CA and TX FIPs codes, the data is being imported into the DB using SQL Alchemy (see drought_etl_final.ipynb).
 
 # Visualization begninings. 
 
