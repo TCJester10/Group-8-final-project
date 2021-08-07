@@ -52,6 +52,34 @@ Root Mean Squared Error (RMSE): 0.7378981220592699
 
 The MSE increased, which indicates that the soil data actually made it more difficult for the Random Forest Model to predict outcomes correctly. We may be better served by leaving out the soil data.
 
+## ML Segment 3
+### Data Preprocessing
+- We made a few changes in the preprocessing of the data in order to achieve better results with our machine learning model. First we used the datetime module and a timedelta function to find the drought scores for a date in the future that we would like to predict and joined that to our original dataframe.
+- Then we accounted for seasonality in drought scores by finding the drought score for one year prior to the date which we would like to predict. 
+- We also filled the NaN values in drought scores with the previous real value. This gave us seven times more data than we had before.
+
+### Accuracy After Segment 3
+We calculated the accuracy for one week, two weeks, and one month out. Our model's performance improved dramatically from the previous week due to the changes we made in the preprocessing stages. However, we can see that the accuracy falls off as the prediction moves further into the future.
+#### One Week Ahead
+Mean Absolute Error (MAE): 0.11395177801839734
+Mean Squared Error (MSE): 0.03870444769778442
+Root Mean Squared Error (RMSE): 0.19673445986350338
+
+#### Two Weeks Ahead
+Mean Absolute Error (MAE): 0.15552836606280845
+Mean Squared Error (MSE): 0.0651923262596554
+Root Mean Squared Error (RMSE): 0.25532787991062666
+
+#### One Month Ahead
+Mean Absolute Error (MAE): 0.21093419709423947
+Mean Squared Error (MSE): 0.1054075453231857
+Root Mean Squared Error (RMSE): 0.3246652819800505
+
+### Random Forest Visualization
+We used sklearn and matplotlib to visualize what is occuring within the random forest model. For the visualization to work we had to limit the max_depth of the model to 3.
+
+<img src="Deliverable-3/MachineLearning_images/RandomForest_Visualization.png" alt="Random Forest Visualization" width="600"/><br>
+
 # Database
 ## DB Segment 1
 - Please see the ERD documentation which outlines our provisional database. Currently, the database is made up of 4 tables, county information, soil information, timeseries data, and weather data. This data was pulled from Kaggle and will be used to create a machine learning model to try to predict droughts. The .csv files in the Resources folder were imported into the Postgres DB as provisional data. 
