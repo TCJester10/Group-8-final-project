@@ -1,9 +1,9 @@
 # Group-8-final-project
 
-## Deliverable 2
+## Deliverable 3
 
 ## Presentation Google Slides
-https://docs.google.com/presentation/d/1oIMWOz1G4GiZtV2B5yJRL4Edb2S7TenvNDerIaXrjV0/edit#slide=id.ge7614f267f_1_29
+https://docs.google.com/presentation/d/1Caz6MMA8HYwnyKdk4ep88FOCOElI2v6IpNqWNUx6xB8/edit?usp=sharing
 
 # GitHub
 * Communication Protocols: As a group we decided to create a slack channel for all communication. We have been using the channel to share resources as well as keep each other up to date on progress, roadblocks, and everything else. 
@@ -93,6 +93,9 @@ We used sklearn and matplotlib to visualize what is occuring within the random f
   - For a specific break down of the tables please see the ERD or drought_final_DB.sql file.
 - The DB is connected with the machine learning model by hosting it in the cloud through AWS/RDS.
 - In order to streamline and reduce the data, I dropped all the county and state information from each individual table and only left the county fips code as a unique identifier. This information can be joined back together using a simple SQL join statement. See *drought_join.sql* for a specific example.
+
+## DB Segment 3
+- No applicable updates for segment 3
 
 # Visualization begninings. 
 
