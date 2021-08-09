@@ -135,3 +135,16 @@ something more to map things. I tried using soil data's lat and long to make a m
 So going forward, what I want to do is move to R or Matplotlib and develop a map by county line. I can use shinyApp to do this by precip, change in precip over time, and predicted results going forward. 
 I really want to seperate the Texas and California results too, but I think by putting my information in map form that will be done quite easily. I also need to lookout
 for things like tropical weather outliers. Harvey hit Texas in 2017 and as we see it caused a massive spike in preciptation. This will be quite interesting going forward I think. I am quite excited. 
+
+
+## Week 3
+
+This week I mainly did work adding a time series for our data. My work covered two years, 2015, and 2020. I also Took the time to save our presentation as a pdf and upload it to github incase our file has something wrong. The big difference is that this week the fully functioning aws webserver holding our data was connected, so all data is consistent now across all aspects of our project. 
+
+![2015](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(128).png)
+
+This is 2015, it was a drier year than 2020. Do note the different key.
+
+![2020](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(129).png)
+
+This is 2020, it should be noted that not all counties have measurements, but it is notable that the year appears to be wetter, assuming equality amongst keys. 
