@@ -1,7 +1,7 @@
 # Group-8-final-project
 
 ## Presentation Google Slides
-https://docs.google.com/presentation/d/1oIMWOz1G4GiZtV2B5yJRL4Edb2S7TenvNDerIaXrjV0/edit#slide=id.ge7614f267f_1_29
+https://docs.google.com/presentation/d/1Caz6MMA8HYwnyKdk4ep88FOCOElI2v6IpNqWNUx6xB8/edit?usp=sharing
 
 # GitHub
 * Communication Protocols: As a group we decided to create a slack channel for all communication. We have been using the channel to share resources as well as keep each other up to date on progress, roadblocks, and everything else. 
