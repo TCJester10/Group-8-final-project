@@ -47,10 +47,10 @@ for things like tropical weather outliers. Harvey hit Texas in 2017 and as we se
 
 This week I mainly did work adding a time series for our data. My work covered two years, 2015, and 2020. I also Took the time to save our presentation as a pdf and upload it to github incase our file has something wrong. The big difference is that this week the fully functioning aws webserver holding our data was connected, so all data is consistent now across all aspects of our project. 
 
-![2015](https://github.com/TCJester10/Group-8-final-project/blob/main/Images/Screenshot%20(128).png)
+![2015](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(128).png)
 
 This is 2015, it was a drier year than 2020. Do note the different key.
 
-![2020](https://github.com/TCJester10/Group-8-final-project/blob/main/Images/Screenshot%20(128).png)
+![2020](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(129).png)
 
 This is 2020, it should be noted that not all counties have measurements, but it is notable that the year appears to be wetter, assuming equality amongst keys. 
