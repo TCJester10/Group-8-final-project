@@ -105,7 +105,7 @@ Root Mean Squared Error (RMSE): 0.767140135325733<br>
 ### Random Forest Visualization
 We used sklearn and matplotlib to visualize what is occuring within the random forest model. (We had to limit the max_depth of the model to 3 for the visualization to display properly, although the full model used a depth of 25.)
 
-<img src="MachineLearning_images/RandomForest_Visualization.png" alt="Random Forest Visualization" width="600"/><br>
+<img src="RandomForest_Visualization.png" alt="Random Forest Visualization" width="600"/><br>
 
 ### Conclusions
 As one would expect, the error in prediction increases as the forecast moves into the future, which is true of most weather forecasting. In order to improve our model's accuracy, we would like to include weather forecasts or to incorporate rolling seven-day averages of weather features such as rainfall. We feel that this would provide greater accuracy than modeling based only on snapshots of the weather in an area. Another area of exploration might be trying other Random Forest Regressor models to see if others have better accuracy than the sklearn model.
