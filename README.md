@@ -29,56 +29,84 @@ We chose a Random Forest Regressor model.
 ### How are you training your model?
 We are training our model on a subset of the data. Since our project is time dependent, we will use the first sixteen years of data to train the model, then four additional years for testing.
 
-### Accuracy After Segment 1
-After Segment 1 we received the following results:
-Mean Absolute Error (MAE): 0.26875707529915116
-Mean Squared Error (MSE): 0.227910793374645
-Root Mean Squared Error (RMSE): 0.4774000349545913
-
 ### How does this model work?
 The Random Forest Regressor works by creating a number of weak models, then analyzing the preponderance of those models predictions to decide upon a final, stronger prediction.
 
+### Segment 1 Accuracy
+After Segment 1 we received the following results:<br>
+Mean Absolute Error (MAE): 0.26875707529915116<br>
+Mean Squared Error (MSE): 0.227910793374645<br>
+Root Mean Squared Error (RMSE): 0.4774000349545913<br>
+
 ## ML Segment 2
-### Data Preprocessing
+### Segment 2 Data Preprocessing
 - In order to prepare the data for the Random Forest Regressor, we first merged our two datasets based on the county FIPS code. The first dataset is a chronological set of weather data. The second dataset reflects static topographical and soil quality data related to each county. 
 - Next we limited the results only to Texas since we wanted to achieve higher accuracies by limiting the location to a single state. To do this we selected only the FIPS codes that begin with "48xxx", which corresponds to all Texas counties.
 - Lastly we dropped some data which was redundant (like the multiple measures of humidity or the differences between high and low temps for each day) or others which were identifiers like latitude and longitude. 
 
-### Accuracy After Segment 2
-After Segment 1 we received the following results:
-Mean Absolute Error (MAE): 0.5480466754695936
-Mean Squared Error (MSE): 0.5444936385385971
-Root Mean Squared Error (RMSE): 0.7378981220592699
+### Segment 2 Accuracy
+After Segment 1 we received the following results:<br>
+Mean Absolute Error (MAE): 0.5480466754695936<br>
+Mean Squared Error (MSE): 0.5444936385385971<br>
+Root Mean Squared Error (RMSE): 0.7378981220592699<br>
 
 The MSE increased, which indicates that the soil data actually made it more difficult for the Random Forest Model to predict outcomes correctly. We may be better served by leaving out the soil data.
 
 ## ML Segment 3
-### Data Preprocessing
+### Segment 3 Data Preprocessing
 - We made a few changes in the preprocessing of the data in order to achieve better results with our machine learning model. First we used the datetime module and a timedelta function to find the drought scores for a date in the future that we would like to predict and joined that to our original dataframe.
 - Then we accounted for seasonality in drought scores by finding the drought score for one year prior to the date which we would like to predict. 
 - We also filled the NaN values in drought scores with the previous real value. This gave us seven times more data than we had before.
 
-### Accuracy After Segment 3
-We calculated the accuracy for one week, two weeks, and one month out. Our model's performance improved dramatically from the previous week due to the changes we made in the preprocessing stages. However, we can see that the accuracy falls off as the prediction moves further into the future.
-#### One Week Ahead
-Mean Absolute Error (MAE): 0.11395177801839734
-Mean Squared Error (MSE): 0.03870444769778442
-Root Mean Squared Error (RMSE): 0.19673445986350338
+### Segment 3 Accuracy
+We calculated the accuracy for one week, two weeks, and one month out. Our model's performance improved dramatically from the previous week due to the changes we made in the preprocessing stages. However, we can see that the accuracy falls off as the prediction moves further into the future.<br>
+One-Week Prediction:<br>
+Mean Absolute Error (MAE): 0.11395177801839734<br>
+Mean Squared Error (MSE): 0.03870444769778442<br>
+Root Mean Squared Error (RMSE): 0.19673445986350338<br>
 
-#### Two Weeks Ahead
-Mean Absolute Error (MAE): 0.15552836606280845
-Mean Squared Error (MSE): 0.0651923262596554
-Root Mean Squared Error (RMSE): 0.25532787991062666
+Two-Week Prediction:<br>
+Mean Absolute Error (MAE): 0.15552836606280845<br>
+Mean Squared Error (MSE): 0.0651923262596554<br>
+Root Mean Squared Error (RMSE): 0.25532787991062666<br>
 
-#### One Month Ahead
-Mean Absolute Error (MAE): 0.21093419709423947
-Mean Squared Error (MSE): 0.1054075453231857
-Root Mean Squared Error (RMSE): 0.3246652819800505
+One-Month Prediction:<br>
+Mean Absolute Error (MAE): 0.21093419709423947<br>
+Mean Squared Error (MSE): 0.1054075453231857<br>
+Root Mean Squared Error (RMSE): 0.3246652819800505<br>
+
+The results show error increasing as the prediction date moves further into the future, as we would expect.
+
+## ML Segment 4
+### Segment 4 Data Preprocessing
+- We ran the model on the full dataset, including all dates from 2000-2020. Prior to this we had only used a small portion of the data in order to keep processing times to a minimum.
+- We broke out the training and testing data based on year. We used the years 2000-2016 for our training data, and 2017-2020 for our testing data.
+- We connected to the Amazon Web Server in which the data is stored and read it as a csv, then began processing it to prepare it for the machine learning model.
+
+### Segment 4 Accuracy
+We ran the model three different times, predicting intervals of one week, two weeks, and one month out. Our results show that the error increases as the date of the prediction moves further out, which we expected.<br>
+One-Week Prediction:<br>
+Mean Absolute Error (MAE): 0.20413663197654738<br>
+Mean Squared Error (MSE): 0.11706565296546045<br>
+Root Mean Squared Error (RMSE): 0.3421485831703245<br>
+
+Two-Week Prediction:<br>
+Mean Absolute Error (MAE): 0.3350311896781634<br>
+Mean Squared Error (MSE): 0.25677364457685015<br>
+Root Mean Squared Error (RMSE): 0.5067283735660064<br>
+
+One-Month Prediction:<br>
+Mean Absolute Error (MAE): 0.5485971341867966<br>
+Mean Squared Error (MSE): 0.5885039872275839<br>
+Root Mean Squared Error (RMSE): 0.767140135325733<br>
 
 ### Random Forest Visualization
-We used sklearn and matplotlib to visualize what is occuring within the random forest model. For the visualization to work we had to limit the max_depth of the model to 3.
+We used sklearn and matplotlib to visualize what is occuring within the random forest model. (We had to limit the max_depth of the model to 3 for the visualization to display properly, although the full model used a depth of 25.)
 
 <img src="Deliverable-3/MachineLearning_images/RandomForest_Visualization.png" alt="Random Forest Visualization" width="600"/><br>
+
+### Conclusions
+As one would expect, the error in prediction increases as the forecast moves into the future, which is true of most weather forecasting. In order to improve our model's accuracy, we would like to include weather forecasts or to incorporate rolling seven-day averages of weather features such as rainfall. We feel that this would provide greater accuracy than modeling based only on snapshots of the weather in an area. Another area of exploration might be trying other Random Forest Regressor models to see if others have better accuracy than the sklearn model.
 
 # Database
 ## DB Segment 1
