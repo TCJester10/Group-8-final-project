@@ -61,7 +61,7 @@ The MSE increased, which indicates that the soil data actually made it more diff
 - We also filled the NaN values in drought scores with the previous real value. This gave us seven times more data than we had before.
 
 ### Segment 3 Accuracy
-We calculated the accuracy for one week, two weeks, and one month out. Our model's performance improved dramatically from the previous week due to the changes we made in the preprocessing stages. However, we can see that the accuracy falls off as the prediction moves further into the future.
+We calculated the accuracy for one week, two weeks, and one month out. Our model's performance improved dramatically from the previous week due to the changes we made in the preprocessing stages. However, we can see that the accuracy falls off as the prediction moves further into the future.<br>
 One-Week Prediction:<br>
 Mean Absolute Error (MAE): 0.11395177801839734<br>
 Mean Squared Error (MSE): 0.03870444769778442<br>
@@ -86,7 +86,7 @@ The results show error increasing as the prediction date moves further into the 
 - We connected to the Amazon Web Server in which the data is stored and read it as a csv, then began processing it to prepare it for the machine learning model.
 
 ### Segment 4 Accuracy
-We ran the model three different times, predicting intervals of one week, two weeks, and one month out. Our results show that the error increases as the date of the prediction moves further out, which we expected.
+We ran the model three different times, predicting intervals of one week, two weeks, and one month out. Our results show that the error increases as the date of the prediction moves further out, which we expected.<br>
 One-Week Prediction:<br>
 Mean Absolute Error (MAE): 0.20413663197654738<br>
 Mean Squared Error (MSE): 0.11706565296546045<br>
