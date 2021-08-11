@@ -33,9 +33,9 @@ We are training our model on a subset of the data. Since our project is time dep
 
 ### Accuracy After Segment 1
 After Segment 1 we received the following results:
-Mean Absolute Error (MAE): 0.26875707529915116
-Mean Squared Error (MSE): 0.227910793374645
-Root Mean Squared Error (RMSE): 0.4774000349545913
+Mean Absolute Error (MAE): 0.26875707529915116<br>
+Mean Squared Error (MSE): 0.227910793374645<br>
+Root Mean Squared Error (RMSE): 0.4774000349545913<br>
 
 ### How does this model work?
 The Random Forest Regressor works by creating a number of weak models, then analyzing the preponderance of those models predictions to decide upon a final, stronger prediction.
@@ -48,27 +48,27 @@ The Random Forest Regressor works by creating a number of weak models, then anal
 
 ### Accuracy After Segment 2
 After Segment 1 we received the following results:
-Mean Absolute Error (MAE): 0.5480466754695936
-Mean Squared Error (MSE): 0.5444936385385971
-Root Mean Squared Error (RMSE): 0.7378981220592699
+Mean Absolute Error (MAE): 0.5480466754695936<br>
+Mean Squared Error (MSE): 0.5444936385385971<br>
+Root Mean Squared Error (RMSE): 0.7378981220592699<br>
 
 The MSE increased, which indicates that the soil data actually made it more difficult for the Random Forest Model to predict outcomes correctly. We may be better served by leaving out the soil data.
 
 ### Accuracy After Segment 4
-One Week Prediction:
-Mean Absolute Error (MAE): 0.20413663197654738
-Mean Squared Error (MSE): 0.11706565296546045
-Root Mean Squared Error (RMSE): 0.3421485831703245
+One-Week Prediction:
+Mean Absolute Error (MAE): 0.20413663197654738<br>
+Mean Squared Error (MSE): 0.11706565296546045<br>
+Root Mean Squared Error (RMSE): 0.3421485831703245<br>
 
-Two Week Prediction:
-Mean Absolute Error (MAE): 0.3350311896781634
-Mean Squared Error (MSE): 0.25677364457685015
-Root Mean Squared Error (RMSE): 0.5067283735660064
+Two-Week Prediction:
+Mean Absolute Error (MAE): 0.3350311896781634<br>
+Mean Squared Error (MSE): 0.25677364457685015<br>
+Root Mean Squared Error (RMSE): 0.5067283735660064<br>
 
-One Month Prediction:
-Mean Absolute Error (MAE): 0.5485971341867966
-Mean Squared Error (MSE): 0.5885039872275839
-Root Mean Squared Error (RMSE): 0.767140135325733
+One-Month Prediction:
+Mean Absolute Error (MAE): 0.5485971341867966<br>
+Mean Squared Error (MSE): 0.5885039872275839<br>
+Root Mean Squared Error (RMSE): 0.767140135325733<br>
 
 
 # Database
