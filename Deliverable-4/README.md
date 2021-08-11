@@ -79,8 +79,8 @@ Root Mean Squared Error (RMSE): 0.3246652819800505<br>
 
 The results show error increasing as the prediction date moves further into the future, as we would expect.
 
-## ML Segment 3
-### Segment 3 Data Preprocessing
+## ML Segment 4
+### Segment 4 Data Preprocessing
 - We ran the model on the full dataset, including all dates from 2000-2020. Prior to this we had only used a small portion of the data in order to keep processing times to a minimum.
 - We broke out the training and testing data based on year. We used the years 2000-2016 for our training data, and 2017-2020 for our testing data.
 - We connected to the Amazon Web Server in which the data is stored and read it as a csv, then began processing it to prepare it for the machine learning model.
