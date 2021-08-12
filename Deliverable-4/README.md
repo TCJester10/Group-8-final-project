@@ -1,12 +1,11 @@
 # Group-8-final-project
 
-## Deliverable 2
+## Deliverable 4
 
 ## Presentation Google Slides
-https://docs.google.com/presentation/d/1oIMWOz1G4GiZtV2B5yJRL4Edb2S7TenvNDerIaXrjV0/edit#slide=id.ge7614f267f_1_29
+https://docs.google.com/presentation/d/1Caz6MMA8HYwnyKdk4ep88FOCOElI2v6IpNqWNUx6xB8/edit?usp=sharing
 
 # GitHub
-* Communication Protocols: As a group we decided to create a slack channel for all communication. We have been using the channel to share resources as well as keep each other up to date on progress, roadblocks, and everything else. 
 * Branches: Each team member has a branch named after themselves for uploading work to github. Each branch has an individual folder for our work to prevent issues during merges. The final deliverables will be handled by one group member.
 
 # Presentation
@@ -122,7 +121,17 @@ As one would expect, the error in prediction increases as the forecast moves int
 - The DB is connected with the machine learning model by hosting it in the cloud through AWS/RDS.
 - In order to streamline and reduce the data, I dropped all the county and state information from each individual table and only left the county fips code as a unique identifier. This information can be joined back together using a simple SQL join statement. See *drought_join.sql* for a specific example.
 
-# Visualization begninings. 
+## DB Segment 3
+- No deliverables required for this segment
+
+## DB Segment 4
+- The Postgres DB has been set up with 4 tables of static data. The data was pulled from Kaggle and a few other sources (see above for specifics) and cleaned using python scripts before being imported into the database.
+  - For a specific break down of the tables please see the ERD or drought_final_DB.sql file.
+- The DB is connected with the machine learning model by hosting it in the cloud through AWS/RDS.
+- In order to streamline and reduce the data, I dropped all the county and state information from each individual table and only left the county fips code as a unique identifier. This information can be joined back together using a simple SQL join statement. See *drought_join.sql* for a specific example.
+- The cleaned data was imported into the DB using SQLAlchemy. For data cleaning and import please see *drought_etl_final.ipynb*
+
+# Visualization
 
 [Tableau Dashboard](https://public.tableau.com/app/profile/tessa.c5417/viz/Initiallookatdroughtdataovertime/Dashboard1)
 
