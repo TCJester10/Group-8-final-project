@@ -1,0 +1,109 @@
+county
+-
+fips int pk FK >- soil_data.fips
+name string
+state string
+
+weather_data
+-
+id int pk
+fips int FK >- county.fips
+date date
+total_population bigint
+area_sqmi int
+population_density_per_sqmi int
+mean_temp int
+min_temp int
+max_temp int
+dewpoint int
+sea_level_pressure int
+station_pressure int
+visibility int
+wind_speed int
+max_wind_speed int
+wind_gust int
+precipitation int
+precip_flag bool
+fog bool
+rain bool
+snow bool
+hail bool
+thunder bool
+tornado bool
+mean_temp_3d_avg numeric
+mean_temp_5d_avg numeric
+mean_temp_10d_avg numeric
+mean_temp_15d_avg numeric
+max_temp_3d_avg numeric
+max_temp_5d_avg numeric
+max_temp_10d_avg numeric
+max_temp_15d_avg numeric
+min_temp_3d_avg numeric
+min_temp_5d_avg numeric
+min_temp_10d_avg numeric
+min_temp_15d_avg numeric
+dewpoint_3d_avg numeric
+dewpoint_5d_avg numeric
+dewpoint_10d_avg numeric
+dewpoint_15d_avg numeric
+
+soil_data
+-
+id int pk
+fips int fk
+lat numeric
+lon numeric
+elevation int
+slope1 numeric
+slope2 numeric
+slope3 numeric
+slope4 numeric
+slope5 numeric
+slope6 numeric
+slope7 numeric
+slope8 numeric
+aspectN numeric
+aspectE numeric
+aspectS numeric
+aspectW numeric
+aspectUnknown numeric
+WAT_LAND numeric
+NVG_LAND numeric
+URB_LAND numeric
+GRS_LAND numeric
+FOR_LAND numeric
+CULTRF_LAND numeric
+CULTIR_LAND numeric
+CULT_LAND numeric
+SQ1 int
+SQ2 int
+SQ3 int
+SQ4 int
+SQ5 int
+SQ6 int
+SQ7 int
+
+drought_time_series
+-
+id int pk
+fips int FK >- county.fips
+date date
+PRECTOT numeric
+PS numeric
+QV2M numeric
+T2M numeric
+T2MDEW numeric
+T2MWET numeric
+T2M_MAX numeric
+T2M_MIN numeric
+T2M_RANGE numeric
+TS numeric
+WS10M numeric
+WS10M_MAX numeric
+WS10M_MIN numeric
+WS10M_RANGE numeric
+WS50M numeric
+WS50M_MAX numeric
+WS50M_MIN numeric
+WS50M_RANGE numeric
+score numeric
