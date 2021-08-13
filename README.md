@@ -1,5 +1,5 @@
 # Group-8-final-project
-[Tableau Dashboard](https://public.tableau.com/app/profile/tessa.c5417/viz/Initiallookatdroughtdataovertime/Dashboard1)
+[Tableau Dashboard](https://public.tableau.com/app/profile/tessa.c5417/viz/ContinuedDroughtworkTXCalifornia/Dashboard1)
 
 ![Drought Score](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(118).png)
 
@@ -54,3 +54,21 @@ This is 2015, it was a drier year than 2020. Do note the different key.
 ![2020](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(129).png)
 
 This is 2020, it should be noted that not all counties have measurements, but it is notable that the year appears to be wetter, assuming equality amongst keys. 
+
+## Week 4
+
+This week I finalized the dashboard and got it presentation ready. Thanks to help from Spencer, I found out how to make time series using our aws server data. After connecting it, I proceeded to put together some simple time series looking into what our ML model would be seeing. The dashboard itself showcases counties monthly precip in mm, drought score for the month, and the drought score plotted with the county FIP number. These can be made for any variable you wish to see correlate with drought score, but I used precip just because it's what everyone knows correlates with drought. 
+
+![The dashboard](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(135).png)
+
+This is the dashboard. The top is the monthly precipitation levels for Texas counties over the course of 2019-2020. The bottom is the drought score by the month over the same time period. It should be noted that a lot of the zeros drought scores (no drought) are simply null data. This could have implications with West Texas Counties in late 2020. 
+
+![Raincloud](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(133).png)
+
+This is a simple chart of drought score by county fip code styled like a raincloud. Note the flood of zero scores at the bottom, many of those are null data. 
+
+![Raincloud](https://github.com/TCJester10/Group-8-final-project/blob/Tessa/Images/Screenshot%20(132).png)
+
+This is the precip time series. I want to mention that the center of the color is set to 50 mm per month. Going forward, I'd like to set it to an actual drought measure. 
+
+Overall I'm happy with how things turned out. However, there are more visualizations I'd like to make. I want to link up to our ML model and its results to showcase by the county where our predictions were vs reality. I'd also like to see if I can make something in R that looks at previous rain levels to see how that effects drought levels, as I doubt drought score is impacted by one dry or wet month very often. I also would like to remove the nulls, so that way we don't have a lot of empty data skewing our results. Overall, I am happy with our project and think it has a good future. 
